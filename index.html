@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monty Apps: app Android e programmi per PC</title>
+<meta name="description" content="Le app Android e i programmi per PC di Matteo Montauti, da scaricare gratis e direttamente: QRbro, Ricette dal Mondo, ALIENATO, Convertitore Video e altri.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<style>
+:root {
+  --bg: #f6f4ef; --surface: #ffffff; --ink: #1c1d1f; --muted: #5d6066; --line: #e2ded5;
+  --accent: #1f6f5c; --accent-ink: #ffffff; --accent-soft: #e3efea; --chip: #efece5;
+  --shadow: 0 1px 2px rgba(30, 25, 10, .06), 0 6px 20px rgba(30, 25, 10, .05);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131416; --surface: #1c1e21; --ink: #ecebe7; --muted: #a2a5ab; --line: #2d3035;
+    --accent: #58c2a6; --accent-ink: #0c1f1a; --accent-soft: #1d3530; --chip: #26292d;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--accent); }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+header.top { padding: 56px 0 28px; }
+.brand { font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+h1 { font-size: clamp(30px, 6vw, 46px); line-height: 1.1; margin: 10px 0 14px; letter-spacing: -.02em; text-wrap: balance; }
+.lead { font-size: 18px; color: var(--muted); max-width: 60ch; margin: 0; }
+
+.tools {
+  position: sticky; top: 0; z-index: 5; background: var(--bg);
+  padding: 12px 0; border-bottom: 1px solid var(--line);
+}
+.tools .wrap { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.filters { display: flex; gap: 6px; flex-wrap: wrap; }
+.filters button {
+  font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+  padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink);
+}
+.filters button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+#cerca {
+  font: inherit; font-size: 15px; flex: 1 1 180px; min-width: 0;
+  padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink);
+}
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+section { padding: 34px 0 6px; }
+h2 { font-size: 22px; margin: 0 0 4px; letter-spacing: -.01em; }
+.sub { color: var(--muted); margin: 0 0 18px; font-size: 15px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 16px; align-items: start; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+  padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px;
+  scroll-margin-top: 80px;
+}
+.head { display: flex; gap: 14px; align-items: center; }
+.icon { width: 60px; height: 60px; border-radius: 14px; flex: none; object-fit: cover; background: var(--chip); }
+.head h3 { margin: 0; font-size: 19px; line-height: 1.2; }
+.meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+.chip { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 6px; background: var(--chip); color: var(--muted); }
+.chip.os { background: var(--accent-soft); color: var(--accent); }
+.breve { margin: 0; }
+.dl { display: flex; flex-direction: column; gap: 8px; }
+.btn {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  padding: 11px 16px; border-radius: 12px; text-decoration: none; font-weight: 650;
+  background: var(--accent); color: var(--accent-ink);
+}
+.btn:hover { filter: brightness(1.08); }
+.btn small { font-weight: 500; opacity: .85; white-space: nowrap; }
+.btn.alt { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+
+details { border-top: 1px solid var(--line); padding-top: 10px; }
+summary { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--muted); }
+details p { margin: 10px 0; font-size: 15px; }
+details ul { margin: 8px 0; padding-left: 20px; font-size: 15px; }
+details li { margin: 3px 0; }
+.req { color: var(--muted); font-size: 14px; }
+.shots { display: flex; gap: 8px; overflow-x: auto; padding: 4px 0 8px; }
+.shots img { height: 220px; width: auto; border-radius: 10px; border: 1px solid var(--line); display: block; }
+.hash { font: 12px/1.4 ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace; color: var(--muted); overflow-wrap: anywhere; margin: 6px 0 0; }
+.vuoto { color: var(--muted); padding: 30px 0; }
+
+.guide { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; }
+.guide article { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+.guide h3 { margin: 0 0 8px; font-size: 17px; }
+.guide ol { margin: 0; padding-left: 20px; font-size: 15px; }
+.guide li { margin: 5px 0; }
+code { font: 13px ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace; background: var(--chip); padding: 1px 5px; border-radius: 5px; overflow-wrap: anywhere; }
+.note { font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+
+footer { margin-top: 44px; border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+footer p { margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Monty Apps</div>
+    <h1>App e programmi da scaricare, senza passare da uno store</h1>
+    <p class="lead">Quello che sviluppo nel tempo libero: app per Android e programmi per PC. Tutto gratuito e senza pubblicità. Scegli, scarica, installa.</p>
+  </div>
+</header>
+
+<div class="tools">
+  <div class="wrap">
+    <div class="filters" role="group" aria-label="Filtra per piattaforma">
+      <button type="button" data-f="tutte" aria-pressed="true">Tutte</button>
+      <button type="button" data-f="android" aria-pressed="false">Android</button>
+      <button type="button" data-f="linux" aria-pressed="false">Linux</button>
+      <button type="button" data-f="windows" aria-pressed="false">Windows</button>
+    </div>
+    <input id="cerca" type="search" placeholder="Cerca un'app…" aria-label="Cerca un'app">
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="android">
+    <h2>App per Android</h2>
+    <p class="sub">File APK da installare direttamente sul telefono.</p>
+    <div class="grid" data-tipo="android"></div>
+  </section>
+
+  <section id="pc">
+    <h2>Programmi per PC</h2>
+    <p class="sub">Per Linux e Windows.</p>
+    <div class="grid" data-tipo="pc"></div>
+  </section>
+
+  <p class="vuoto" id="vuoto" hidden>Nessuna app corrisponde alla ricerca.</p>
+  <noscript><p class="vuoto">Per vedere l'elenco serve JavaScript. I file sono elencati in <a href="apps.json">apps.json</a>.</p></noscript>
+
+  <section id="installare">
+    <h2>Come si installa</h2>
+    <p class="sub">Le app non arrivano da uno store, quindi il sistema chiede una conferma in più.</p>
+    <div class="guide">
+      <article>
+        <h3>Android (file .apk)</h3>
+        <ol>
+          <li>Scarica l'APK dal telefono e aprilo dalle notifiche o dalla cartella Download.</li>
+          <li>Se richiesto, consenti al browser di «installare app sconosciute».</li>
+          <li>Tocca Installa. Se Play Protect mostra un avviso, scegli «Installa comunque».</li>
+        </ol>
+        <p class="note">Se avevi già la stessa app dal Play Store, disinstallala prima: la firma è diversa e l'aggiornamento verrebbe rifiutato.</p>
+      </article>
+      <article>
+        <h3>Linux (file .AppImage)</h3>
+        <ol>
+          <li>Scarica il file.</li>
+          <li>Rendilo eseguibile: tasto destro → Proprietà → Permessi, oppure <code>chmod +x nome.AppImage</code>.</li>
+          <li>Doppio clic per avviarlo. Non serve installare nulla.</li>
+        </ol>
+        <p class="note">I programmi in Python si avviano con <code>python3 nome.py</code>.</p>
+      </article>
+      <article>
+        <h3>Windows (file .exe)</h3>
+        <ol>
+          <li>Scarica il file e avvialo con un doppio clic.</li>
+          <li>Se compare «PC protetto da Windows», scegli «Ulteriori informazioni» → «Esegui comunque».</li>
+        </ol>
+        <p class="note">L'avviso compare perché il programma non ha una firma digitale a pagamento.</p>
+      </article>
+    </div>
+    <p class="note">Sotto «Dettagli» di ogni app trovi l'impronta SHA-256 del file, per verificare che il download sia integro.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Sviluppato da <a href="https://snowkills.github.io/">Matteo Montauti</a> · <a href="https://github.com/Snowkills">GitHub</a></p>
+    <p>I programmi sono offerti così come sono, senza garanzia.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var OS = { android: "Android", linux: "Linux", windows: "Windows", python: "Python" };
+  var filtro = "tutte", testo = "", APP = [];
+
+  function el(tag, cls, txt) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (txt != null) e.textContent = txt;
+    return e;
+  }
+  function mb(n) {
+    if (n == null) return "";
+    return n >= 1048576 ? (n / 1048576).toFixed(1).replace(".", ",") + " MB" : Math.max(1, Math.round(n / 1024)) + " kB";
+  }
+  function piattaforme(a) {
+    var s = [];
+    a.download.forEach(function (d) {
+      var p = d.piattaforma === "python" ? ["linux", "windows"] : [d.piattaforma];
+      p.forEach(function (x) { if (s.indexOf(x) < 0) s.push(x); });
+    });
+    return s;
+  }
+  function norm(s) { return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+
+  function scheda(a) {
+    var c = el("article", "card"); c.id = a.id;
+
+    var h = el("div", "head");
+    var ic = el("img", "icon"); ic.src = a.icona; ic.alt = ""; ic.width = 60; ic.height = 60;
+    var t = el("div");
+    t.appendChild(el("h3", null, a.nome));
+    var m = el("div", "meta");
+    m.appendChild(el("span", "chip", "v" + a.versione));
+    piattaforme(a).forEach(function (p) { m.appendChild(el("span", "chip os", OS[p])); });
+    t.appendChild(m);
+    h.appendChild(ic); h.appendChild(t); c.appendChild(h);
+
+    c.appendChild(el("p", "breve", a.breve));
+
+    var dl = el("div", "dl");
+    a.download.forEach(function (d, i) {
+      var b = el("a", "btn" + (i ? " alt" : ""));
+      b.href = d.file; b.setAttribute("download", "");
+      b.appendChild(el("span", null, d.etichetta));
+      b.appendChild(el("small", null, mb(d.dimensione)));
+      dl.appendChild(b);
+    });
+    c.appendChild(dl);
+
+    var det = el("details");
+    det.appendChild(el("summary", null, "Dettagli"));
+    det.appendChild(el("p", null, a.descrizione));
+    if (a.screenshot && a.screenshot.length) {
+      var sh = el("div", "shots");
+      a.screenshot.forEach(function (s, i) {
+        var l = el("a"); l.href = s; l.target = "_blank"; l.rel = "noopener";
+        var im = el("img"); im.src = s; im.loading = "lazy";
+        im.alt = "Schermata di " + a.nome + " (" + (i + 1) + ")";
+        l.appendChild(im); sh.appendChild(l);
+      });
+      det.appendChild(sh);
+    }
+    var ul = el("ul");
+    a.caratteristiche.forEach(function (x) { ul.appendChild(el("li", null, x)); });
+    det.appendChild(ul);
+    det.appendChild(el("p", "req", "Requisiti: " + a.requisiti));
+    (a.link || []).forEach(function (k) {
+      var p = el("p"), l = el("a", null, k.etichetta); l.href = k.url; p.appendChild(l); det.appendChild(p);
+    });
+    a.download.forEach(function (d) {
+      if (!d.sha256) return;
+      var nome = d.file.split("/").pop();
+      det.appendChild(el("p", "hash", nome + (d.aggiornato ? " · " + d.aggiornato.split("-").reverse().join("/") : "") + " · SHA-256 " + d.sha256));
+    });
+    c.appendChild(det);
+    return c;
+  }
+
+  function mostra() {
+    var visibili = 0;
+    document.querySelectorAll(".grid").forEach(function (g) {
+      g.textContent = "";
+      var n = 0;
+      APP.forEach(function (a) {
+        if (a.tipo !== g.dataset.tipo) return;
+        if (filtro !== "tutte" && piattaforme(a).indexOf(filtro) < 0) return;
+        if (testo && norm(a.nome + " " + a.breve + " " + a.descrizione).indexOf(testo) < 0) return;
+        g.appendChild(scheda(a)); n++;
+      });
+      g.closest("section").hidden = n === 0;
+      visibili += n;
+    });
+    document.getElementById("vuoto").hidden = visibili > 0;
+  }
+
+  document.querySelectorAll(".filters button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      filtro = b.dataset.f;
+      document.querySelectorAll(".filters button").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+      mostra();
+    });
+  });
+  document.getElementById("cerca").addEventListener("input", function (e) { testo = norm(e.target.value.trim()); mostra(); });
+
+  fetch("apps.json", { cache: "no-cache" })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      APP = d; mostra();
+      if (location.hash.length > 1) {
+        var t = document.getElementById(location.hash.slice(1));
+        if (t) t.scrollIntoView();
+      }
+    })
+    .catch(function () {
+      var v = document.getElementById("vuoto");
+      v.textContent = "Non riesco a caricare l'elenco delle app. Riprova tra poco.";
+      v.hidden = false;
+    });
+})();
+</script>
+</body>
+</html>

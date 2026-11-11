@@ -1,0 +1,248 @@
+[
+  {
+    "id": "qrbro",
+    "nome": "QRbro",
+    "versione": "6.7",
+    "tipo": "android",
+    "icona": "img/qrbro.png",
+    "breve": "Lettore e generatore di codici QR, veloce e senza pubblicità.",
+    "descrizione": "Inquadra un codice QR e hai subito il risultato: link da aprire, testo da copiare, contatti da salvare. Puoi anche leggere un QR da una foto in galleria, crearne di nuovi e condividerli.",
+    "caratteristiche": [
+      "Scansione dalla fotocamera o da un'immagine in galleria",
+      "Torcia per gli ambienti bui",
+      "Generatore di QR da testo o link, con condivisione",
+      "Cronologia delle ultime scansioni",
+      "Schede contatto leggibili al volo",
+      "Un mini gioco nascosto per le attese"
+    ],
+    "requisiti": "Android 7.0 o successivo",
+    "screenshot": [],
+    "download": [
+      {
+        "piattaforma": "android",
+        "etichetta": "Scarica APK",
+        "file": "downloads/android/QRbro-6.7.apk",
+        "aggiornato": "2026-11-11",
+        "dimensione": 22358184,
+        "sha256": "009bfc89df81b3c081f7bcf5012c56199bbd7fd78604da11595a3fe0af1b1a6b"
+      }
+    ]
+  },
+  {
+    "id": "ricette-dal-mondo",
+    "nome": "Ricette dal Mondo",
+    "versione": "1.0.0",
+    "tipo": "android",
+    "icona": "img/ricette.svg",
+    "breve": "Fai girare il globo e cucina 5 ricette tradizionali del paese estratto.",
+    "descrizione": "Un globo 3D da far girare: esce uno dei 195 stati del mondo e l'app ti propone 5 ricette tradizionali di quel paese, con ingredienti in unità metriche, procedimento passo-passo e foto. Con «Cosa ho in frigo» parti invece dagli ingredienti che hai in casa.",
+    "caratteristiche": [
+      "195 paesi, 5 ricette ciascuno",
+      "Globo da ruotare a mano e sorteggio con SPIN",
+      "Elenco dei paesi con ricerca e filtro per continente",
+      "«Cosa ho in frigo»: trova le ricette che puoi preparare subito",
+      "Ingredienti in grammi e millilitri, passaggi numerati"
+    ],
+    "requisiti": "Android 7.0 o successivo · connessione per le foto",
+    "screenshot": [
+      "img/ricette-1.jpg",
+      "img/ricette-2.jpg",
+      "img/ricette-3.jpg",
+      "img/ricette-4.jpg"
+    ],
+    "download": [
+      {
+        "piattaforma": "android",
+        "etichetta": "Scarica APK",
+        "file": "downloads/android/RicetteDalMondo-1.0.0.apk",
+        "aggiornato": "2026-11-11",
+        "dimensione": 21474129,
+        "sha256": "75402444ed286ea714045b6ef605695f81338052295baf2db5f719b08233af23"
+      }
+    ]
+  },
+  {
+    "id": "alienato",
+    "nome": "ALIENATO",
+    "versione": "0.1",
+    "tipo": "android",
+    "icona": "img/alienato.png",
+    "breve": "Sparatutto a ondate: sopravvivi all'arena, potenziati, abbatti il boss.",
+    "descrizione": "Un gioco d'azione ad arena con visuale dall'alto. Due pistole, ondate di nemici sempre più numerose e un boss che ti aspetta. Tra un'ondata e l'altra scegli i potenziamenti e raccogli quello che i nemici lasciano cadere.",
+    "caratteristiche": [
+      "Nemici diversi: kamikaze, tiratori, saltatori, volanti",
+      "Potenziamenti a scelta e oggetti da raccogliere: cure, armatura, granate",
+      "Mine, torrette e trappole nell'arena",
+      "Mira automatica o manuale con doppia levetta",
+      "Si gioca in verticale e in orizzontale"
+    ],
+    "requisiti": "Android 7.0 o successivo · versione di anteprima",
+    "screenshot": [],
+    "download": [
+      {
+        "piattaforma": "android",
+        "etichetta": "Scarica APK",
+        "file": "downloads/android/Alienato-0.1.apk",
+        "aggiornato": "2026-11-11",
+        "dimensione": 59109396,
+        "sha256": "b1c7b1ba4681d9153b37999877ec8a890d3d4d791c4850305d58d7f701ac0f16"
+      }
+    ]
+  },
+  {
+    "id": "ramo",
+    "nome": "Ramo",
+    "versione": "1.0",
+    "tipo": "android",
+    "icona": "img/ramo.svg",
+    "breve": "Registra video anche a schermo spento: dashcam e lezioni.",
+    "descrizione": "Un registratore video essenziale pensato per restare attivo in background e a schermo spento, consumando poca batteria. Nato come dashcam per l'auto e per registrare le lezioni universitarie. Usalo solo dove sei autorizzato a registrare.",
+    "caratteristiche": [
+      "Video MP4 a 1080p e 30 fps, salvati in Movies/Ramo",
+      "Continua a registrare con lo schermo spento",
+      "Durata massima impostabile: da 30 minuti a nessun limite",
+      "Si ferma e salva da solo con batteria al 20% o memoria quasi piena",
+      "Un tocco sulla notifica per fermare e salvare"
+    ],
+    "requisiti": "Android 8.0 o successivo",
+    "screenshot": [],
+    "download": [
+      {
+        "piattaforma": "android",
+        "etichetta": "Scarica APK",
+        "file": "downloads/android/Ramo-1.0.apk",
+        "aggiornato": "2026-11-11",
+        "dimensione": 9928623,
+        "sha256": "f81229cfb60dd3ed1a01e021663f0bd8401d902862e629b8aa9fa524cee0919d"
+      }
+    ]
+  },
+  {
+    "id": "convertitore-video",
+    "nome": "Convertitore Video",
+    "versione": "1.0",
+    "tipo": "pc",
+    "icona": "img/convertitore.png",
+    "breve": "Converti i video in un altro formato o risoluzione, con un clic.",
+    "descrizione": "Trascini un video nella finestra, scegli risoluzione e formato, premi Converti. Una barra mostra l'avanzamento e il tempo rimanente. Niente opzioni complicate: sotto lavora ffmpeg.",
+    "caratteristiche": [
+      "Formati: MP4 (H.264 e H.265), WebM, AVI, MKV, MOV",
+      "Risoluzioni da 360p a 4K, oppure quella originale",
+      "Trascina e rilascia",
+      "Avanzamento in tempo reale e annullamento",
+      "Un solo file, nessuna installazione"
+    ],
+    "requisiti": "Linux a 64 bit · serve ffmpeg (sudo apt install ffmpeg)",
+    "screenshot": [
+      "img/shot-convertitore.png"
+    ],
+    "download": [
+      {
+        "piattaforma": "linux",
+        "etichetta": "Scarica AppImage",
+        "file": "downloads/linux/ConvertitoreVideo-x86_64.AppImage",
+        "aggiornato": "2026-11-11",
+        "dimensione": 55093752,
+        "sha256": "29acebe452534c0dc73b2561cdcd853104ca87d5f7c4c1b71d94a74323e8111a"
+      }
+    ]
+  },
+  {
+    "id": "mini-paint",
+    "nome": "Mini Paint",
+    "versione": "1.0",
+    "tipo": "pc",
+    "icona": "img/minipaint.png",
+    "breve": "Un editor di immagini leggero per i ritocchi di tutti i giorni.",
+    "descrizione": "Apri un'immagine, ritagliala, ridimensionala, scrivici sopra o disegna a mano libera, poi salvala. Tutto quello che serve per un ritocco veloce, senza aprire un programma pesante.",
+    "caratteristiche": [
+      "Apre e salva JPG, PNG e BMP",
+      "Ritaglio e ridimensionamento",
+      "Penna, gomma e testo",
+      "Incolla dagli appunti",
+      "Zoom e 20 passi di annulla/ripeti"
+    ],
+    "requisiti": "Linux a 64 bit",
+    "screenshot": [],
+    "download": [
+      {
+        "piattaforma": "linux",
+        "etichetta": "Scarica AppImage",
+        "file": "downloads/linux/MiniPaint-x86_64.AppImage",
+        "aggiornato": "2026-11-11",
+        "dimensione": 24443384,
+        "sha256": "cc3d83cff8b139f5e3d5d2e5a95a2c351284aca30460c00f442b79d0e1da5207"
+      }
+    ]
+  },
+  {
+    "id": "ai-desktop-launcher",
+    "nome": "AI Desktop Launcher",
+    "versione": "1.0",
+    "tipo": "pc",
+    "icona": "img/launcher.svg",
+    "breve": "Una barra flottante per aprire Gemini, Claude, ChatGPT, DeepSeek e Qwen.",
+    "descrizione": "Una piccola barra che sta in cima allo schermo e apre con un clic i principali assistenti AI, ognuno nella propria finestra. Usa Chrome in modalità app, quindi resti collegato ai tuoi account senza rifare l'accesso ogni volta.",
+    "caratteristiche": [
+      "Cinque assistenti a un clic di distanza",
+      "Può restare sempre sopra le altre finestre",
+      "Mantiene accessi e sessioni di Chrome",
+      "Codice aperto, licenza MIT"
+    ],
+    "requisiti": "Google Chrome o Chromium · su Linux servono Python 3 e PyQt6",
+    "screenshot": [],
+    "link": [
+      {
+        "etichetta": "Codice su GitHub",
+        "url": "https://github.com/Snowkills/AI-Desktop-Launcher"
+      }
+    ],
+    "download": [
+      {
+        "piattaforma": "windows",
+        "etichetta": "Scarica per Windows",
+        "file": "downloads/windows/AIDesktopLauncher.exe",
+        "aggiornato": "2026-11-11",
+        "dimensione": 37104017,
+        "sha256": "cf5e6c706601293aa3289eef7e1b95dfb5f386fadbbb3c6e51dee6f0db13a41c"
+      },
+      {
+        "piattaforma": "linux",
+        "etichetta": "Sorgenti per Linux",
+        "file": "downloads/sorgenti/AI-Desktop-Launcher.zip",
+        "aggiornato": "2026-11-11",
+        "dimensione": 11007,
+        "sha256": "3e3a658170ccfc1495568329f1b4f27142eb4ff65b763bf2ec4736b25316e161"
+      }
+    ]
+  },
+  {
+    "id": "abaco",
+    "nome": "Abaco",
+    "versione": "1.0",
+    "tipo": "pc",
+    "icona": "img/abaco.svg",
+    "breve": "Un abaco colorato per imparare unità, decine, centinaia e decimali.",
+    "descrizione": "Un soroban interattivo: ogni asta è una cifra, la pallina in alto vale 5 e le quattro in basso valgono 1. Sposti le palline con un clic e il numero si aggiorna, con i riporti. Pensato per i bambini che stanno imparando il valore posizionale.",
+    "caratteristiche": [
+      "Dieci aste: dai milioni ai millesimi",
+      "Clic sulle palline o rotella del mouse per +1 e −1",
+      "Conta automatica, numero casuale, imposta un numero",
+      "Un solo file Python, funziona su Linux, Windows e macOS"
+    ],
+    "requisiti": "Python 3 con Tkinter",
+    "screenshot": [
+      "img/shot-abaco.png"
+    ],
+    "download": [
+      {
+        "piattaforma": "python",
+        "etichetta": "Scarica abaco.py",
+        "file": "downloads/sorgenti/abaco.py",
+        "aggiornato": "2026-11-11",
+        "dimensione": 20220,
+        "sha256": "c6bba86efe71ca8b46b83f0ff8d1a73523784de9c9485cbbee2701df81582731"
+      }
+    ]
+  }
+]
