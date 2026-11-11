@@ -218,16 +218,17 @@
   },
   {
     "id": "abaco",
-    "nome": "Abaco",
-    "versione": "1.0",
+    "nome": "L'abaco delle palline",
+    "versione": "2.0",
     "tipo": "pc",
     "icona": "img/abaco.svg",
-    "breve": "Un abaco colorato per imparare unità, decine, centinaia e decimali.",
-    "descrizione": "Un soroban interattivo: ogni asta è una cifra, la pallina in alto vale 5 e le quattro in basso valgono 1. Sposti le palline con un clic e il numero si aggiorna, con i riporti. Pensato per i bambini che stanno imparando il valore posizionale.",
+    "breve": "Un abaco colorato per imparare unità, decine, centinaia e migliaia.",
+    "descrizione": "Quattro aste, una per le migliaia, le centinaia, le decine e le unità. Quando su un'asta arriva la decima pallina, le dieci si uniscono e diventano una pallina dell'asta a sinistra; togliendo da un'asta vuota succede il contrario. Così il cambio e il prestito si vedono accadere. Pensato per i bambini della scuola primaria.",
     "caratteristiche": [
-      "Dieci aste: dai milioni ai millesimi",
-      "Clic sulle palline o rotella del mouse per +1 e −1",
-      "Conta automatica, numero casuale, imposta un numero",
+      "Numeri da 0 a 9999, con k, h, da e u in colori diversi",
+      "Clic per aggiungere una pallina, clic destro per toglierla",
+      "Animazione del cambio: 10 palline diventano 1",
+      "Conta automatica e scelta di un numero",
       "Un solo file Python, funziona su Linux, Windows e macOS"
     ],
     "requisiti": "Python 3 con Tkinter",
@@ -237,11 +238,11 @@
     "download": [
       {
         "piattaforma": "python",
-        "etichetta": "Scarica abaco.py",
-        "file": "downloads/sorgenti/abaco.py",
+        "etichetta": "Scarica abaco_bimbi.py",
+        "file": "downloads/sorgenti/abaco_bimbi.py",
         "aggiornato": "2026-11-11",
-        "dimensione": 20220,
-        "sha256": "c6bba86efe71ca8b46b83f0ff8d1a73523784de9c9485cbbee2701df81582731"
+        "dimensione": 27465,
+        "sha256": "8d4da4924c9e1b8f5198142ecd95490ea2a9c1c90e2b17388de8f577c0788ec7"
       }
     ]
   }
